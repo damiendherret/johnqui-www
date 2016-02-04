@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Johnqui, Out in a dark yard</title>
+	
+	<link href="style-index-oiady.css" rel="stylesheet" type="text/css" />
+	
+<script>
+
+var isWebkit = (navigator.userAgent.match(/webkit/i));
+var isSafari = (navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i));
+var isFirefox = (navigator.userAgent.match(/firefox/i));
+var isOldIE = (navigator.userAgent.match(/msie 8/i));
+var isIE9 = (navigator.userAgent.match(/msie 9/i));
+var isMobile = (navigator.userAgent.match(/iphone|ipad|android|silk|mobile/i));
+var isWinXP = (navigator.userAgent.match(/windows nt 5/i));
+
+var i1 = new Image().src = "img/bgds/oiady.jpg"; 
+var i2 = new Image().src = "img/bgds/1.jpg"; 
+
+
+function launchVideo1(e){
+	var video1Link=document.getElementById("videoVignetteLink1")||document.getElementsByName("videoVignetteLink1")[0];
+	var url=video1Link.href;
+	
+	e.preventDefault();
+	e.stopImmediatePropagation();
+	
+	launchBox(url);
+	return false;
+}
+
+function launchVideo2(e){
+	var video2Link=document.getElementById("videoVignetteLink2")||document.getElementsByName("videoVignetteLink2")[0];
+	var url=video2Link.href;
+	
+	e.preventDefault();
+	e.stopImmediatePropagation();
+	
+	launchBox(url);
+	return false;
+}
+
+function launchBox(content){
+	var innerHTML;
+	if (content.match(/youtube/g)){ //BUG attention youtube devient un mot clé interdit dans les news
+		innerHTML="<iframe width=\"560\" height=\"315\" src=\""+content+"\" frameborder=\"0\" allowfullscreen></iframe>";
+	}
+	else {
+		innerHTML=content;
+	}
+	var videoContent=document.getElementById("videoBoxContent")||document.getElementsByName("videoBoxContent")[0];
+	var videoBox=document.getElementById("videoBox")||document.getElementsByName("videoBox")[0];
+	
+	videoContent.innerHTML=innerHTML;
+	videoBox.style.visibility="visible";
+	
+}
+
+
+function closeVideoBox(e){
+	var videoContent=document.getElementById("videoBoxContent")||document.getElementsByName("videoBoxContent")[0];
+	var videoBox=document.getElementById("videoBox")||document.getElementsByName("videoBox")[0];
+	
+	videoContent.innerHTML=""; //on vide la fenetre pour Safari.
+	videoBox.style.visibility="hidden";
+	e.preventDefault();
+	e.stopImmediatePropagation();
+	return false;
+}
+
+	
+
+function addHandlers() {
+	if (window.addEventListener){
+
+/*
+		//fermeture de la box de video
+		var videoCloser=document.getElementById("videoBoxClose")||document.getElementsByName("videoBoxClose")[0];
+		videoCloser.addEventListener("click", closeVideoBox, true);
+		
+		//clic sur la video1
+		var video1Link=document.getElementById("videoVignetteLink1")||document.getElementsByName("videoVignetteLink1")[0];
+		video1Link.addEventListener("click", launchVideo1, true);
+		
+		//clic sur la video2
+		var video2Link=document.getElementById("videoVignetteLink2")||document.getElementsByName("videoVignetteLink2")[0];
+		video2Link.addEventListener("click", launchVideo2, true);
+		*/
+	}
+}
+
+
+function changeToBoj(){
+	document.body.style.background="url(img/bgds/1.jpg) right 0 no-repeat fixed";
+	var slide1=document.getElementById("slide1")||document.getElementsByName("slide1")[0];
+	slide1.style.visibility="hidden";
+	var slide2=document.getElementById("slide2")||document.getElementsByName("slide2")[0];
+	slide2.style.visibility="visible";
+
+	var bojLink = document.getElementById("bojLink")||document.getElementsByName("bojLink")[0];
+	var oiadyLink = document.getElementById("oiadyLink")||document.getElementsByName("oiadyLink")[0];
+	bojLink.style.fontWeight="bold";
+	oiadyLink.style.fontWeight="normal";
+}
+function changeToOiady(){
+	document.body.style.background="url(img/bgds/oiady.jpg) right 0 no-repeat fixed";
+	var slide1=document.getElementById("slide1")||document.getElementsByName("slide1")[0];
+	slide1.style.visibility="visible";
+	var slide2=document.getElementById("slide2")||document.getElementsByName("slide2")[0];
+	slide2.style.visibility="hidden";
+
+	var bojLink = document.getElementById("bojLink")||document.getElementsByName("bojLink")[0];
+	var oiadyLink = document.getElementById("oiadyLink")||document.getElementsByName("oiadyLink")[0];
+	bojLink.style.fontWeight="normal";
+	oiadyLink.style.fontWeight="bold";
+}
+
+
+
+function init(){
+	addHandlers();
+}
+
+</script>
+</head>
+
+<body>
+
+	<div id="johnqui">
+	Johnqui.
+	</div>
+
+	<div id="selectAlbum">
+	<a href="#" class="changeAlbumLink" id="oiadyLink" onclick="changeToOiady();return false;">Out in a dark yard</a> | <a href="#" class="changeAlbumLink" id="bojLink" onclick="changeToBoj();return false;">The birds of June</a> | <a href="http://order.johnqui.com" class="changeAlbumLink" target="_blank">SHOP NOW !</a>
+	</div>
+
+	<div id="slide1">
+		<div class="slide_inside">					
+			<div id="bofOut" class="greatTitle">
+				Out in a dark yard, October 16 2015.
+			</div>
+			<div id="buyingLinks">
+				<div id="iTunesBtn" class="buyBtn"><a href="https://itunes.apple.com/fr/album/out-in-a-dark-yard-ep/id1036160581" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="amazonBtn" class="buyBtn"><a href="http://www.amazon.fr/Out-Dark-Yard-Johnqui/dp/B014TCFK4U/" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="deezerBtn" class="buyBtn"><a href="http://www.deezer.com/album/11139514" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="googleBtn" class="buyBtn"><a href="https://play.google.com/store/music/album/Johnqui_Out_in_a_Dark_Yard?id=Bpijnfw2ch7hh3tipezrlki4d6q&hl=fr" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="spotifyBtn" class="buyBtn"><a href="https://open.spotify.com/album/2kcHDBb8ak3ZGvzPykKFzZ" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				
+			</div>
+		</div>
+			
+	</div> <!--.slide_inside-->	 
+		
+	<div id="slide2">
+		<div class="slide_inside">					
+			<div id="bofOut" class="greatTitle">
+				The Birds Of June (2013).
+			</div>
+			<div id="buyingLinks">
+				<div id="iTunesBtn" class="buyBtn"><a href="https://itunes.apple.com/fr/album/the-birds-of-june/id658064359" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="amazonBtn" class="buyBtn"><a href="http://www.amazon.fr/Birds-June-Johnqui/dp/B00D89ZV04" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="deezerBtn" class="buyBtn"><a href="http://www.deezer.com/album/6660418" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="googleBtn" class="buyBtn"><a href="https://play.google.com/store/music/album/Johnqui_The_Birds_of_June?id=Bhtgbt2ke2zeovldmckyqrnupie" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="qobuzBtn" class="buyBtn"><a href="http://www.qobuz.com/fr-fr/album/the-birds-of-june-johnqui/3610153016956" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				<div id="spotifyBtn" class="buyBtn"><a href="http://spoti.fi/1bmEev4" class="buyingLinks" target="_blank">&nbsp;</a></div>
+				
+			</div>
+		</div>
+			
+	</div>
+
+	
+	
+	<!--Video Box-->
+	<div id="videoBox" class="videoBoxStyle">
+		<div id="videoBoxContent">
+			<!--iframe width="560" height="315" src="http://www.youtube.com/embed/DMCN4-yS_EE" frameborder="0" allowfullscreen></iframe!-->
+		</div>
+		<a id="videoBoxClose"></a>
+	</div>
+	
+	<!-- Social and facebook -->
+	<div id="socialAndFb">
+		<div id="social">
+			<a href="mailto:contact@johnqui.com" class="miniLink"><img src="img/icons/email.png" class="imgMiniLink" alt="contact@johnqui.com"></a>
+				<a href="https://www.facebook.com/OfficialJohnqui" class="miniLink" target="_blank" alt="Facebook"><img src="img/icons/facebook.png" class="imgMiniLink"></a>
+				<a href="https://twitter.com/officialJohnqui" class="miniLink" target="_blank" alt="Twitter"><img src="img/icons/twitter.png" class="imgMiniLink"></a>
+				<a href="https://soundcloud.com/johnqui" class="miniLink" target="_blank" alt="Soundcloud"><img src="img/icons/soundcloud.png" class="imgMiniLink"></a>
+				<a href="http://www.lastfm.fr/music/johnqui" class="miniLink" target="_blank" alt="LastFm"><img src="img/icons/lastfm.png" class="imgMiniLink"></a>
+				<a href="https://myspace.com/officialjohnqui" class="miniLink" target="_blank" alt="MySpace"><img src="img/icons/myspace2.png" class="imgMiniLink"></a>
+				<a href="http://open.spotify.com/artist/1i05GUBSP5EOweUcZ7EcxY" class="miniLink" target="_blank"  alt="Spotify"><img src="img/icons/spotify.png" class="imgMiniLink"></a>
+				<a href="https://www.youtube.com/watch?v=t_QsXT0V5rI" class="miniLink" target="_blank"  alt="Youtube"><img src="img/icons/youtube.png" class="imgMiniLink"></a>
+		</div>
+		<div id="fb-like" class="likeButton">
+			<iframe height="21" width="auto" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialJohnqui&width&layout=button_count&action=like&show_faces=false&share=false&height=21" frameborder="0" ></iframe>
+		</div>
+	</div>
+	
+	<!-- Wilsound Records-->
+	<!-- La vignette Wilsound, puis à coté en carré les minilink -->
+	<div id="wilsound">
+		<div id="wilsoundLinks"><a href="mailto:wilsoundrecords@gmail.com" class="miniLink"><img src="img/icons/email.png" class="imgMiniLink"></a>
+			<a href="http://wilsoundrecords.tumblr.com/" class="miniLink" target="_blank"><img src="img/icons/tumblr.png" class="imgMiniLink"></a>
+			<a href="https://twitter.com/wilsoundRecords" class="miniLink" target="_blank"><img src="img/icons/twitter.png" class="imgMiniLink"></a>
+			<a href="https://soundcloud.com/wilsound-records" class="miniLink" target="_blank"><img src="img/icons/soundcloud.png" class="imgMiniLink"></a>
+		</div>
+		<div id="wilsoundImg"><img src="img/icons/WilsoundRecords.png" id="wilsoundImgFile"></div>
+	</div>
+
+<script>
+window.onload=function(){init();};
+</script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41816395-1', 'auto');
+  ga('send', 'pageview');
+
+  	var slide2=document.getElementById("slide2")||document.getElementsByName("slide2")[0];
+	slide2.style.visibility="hidden";
+	var bojLink = document.getElementById("bojLink")||document.getElementsByName("bojLink")[0];
+	var oiadyLink = document.getElementById("oiadyLink")||document.getElementsByName("oiadyLink")[0];
+	bojLink.style.fontWeight="normal";
+	oiadyLink.style.fontWeight="bold";
+
+</script>
+</body>
+</html>

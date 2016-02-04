@@ -1,0 +1,402 @@
+/*-----------------------------------------------------
+					GENERALITE
+-------------------------------------------------------*/
+body {
+	margin: 0;
+	padding: 0;
+	color:#fff;
+	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	height:100%;
+	transition: 2s;
+	background: url(img/bgds/oiady.jpg) right 0 no-repeat fixed;
+
+
+}
+
+h2 {
+	font-size: 2em;
+	font-weight:bold;
+}
+
+a {
+	font-weight:bold;
+	color: #fff;
+	text-decoration: none;
+}
+
+img {
+	border: none; /* pour IE*/
+}
+
+/*-----------------------------------------------------
+					Initialisation des slides
+-------------------------------------------------------*/
+
+
+
+#slide1 {
+	position: fixed;
+	margin-top:20%;
+	margin-right: 0px;
+	width:100%;
+}
+#slide2 {
+	position: fixed;
+	margin-top:20%;
+	margin-right: 0px;
+	width:100%;
+}
+
+/*-----------------------------------------------------
+					Johnqui
+-------------------------------------------------------*/
+#johnqui{
+	position: fixed;
+	left:50px;
+	top:40px;
+	text-shadow: none;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 60px;
+	color: rgba(255, 255, 255, 1);
+}
+
+#selectAlbum{
+	position: fixed;
+	left:50px;
+	top:110px;
+	text-shadow: none;
+	font-family: Helvetica, sans-serif;
+}
+
+#selectAlbum a:hover{
+	color: rgba(150, 150, 150, 1);
+}
+
+/*-----------------------------------------------------
+					Slide 1 : Accueil
+-------------------------------------------------------*/
+
+#slide1  .slide_inside {
+	background-color: rgba(0, 0, 0, 0.2);
+	text-align:right;
+}
+
+#slide1  .greatTitle {
+	margin-right:100px;
+	font-size: 80px;
+}
+
+#slide1  .subTitle {
+	font-size: 50px;
+	margin-right:100px;
+}
+
+
+#slide2  .slide_inside {
+	background-color: rgba(0, 0, 0, 0.2);
+	text-align:right;
+}
+
+#slide2  .greatTitle {
+	margin-right:100px;
+	font-size: 80px;
+}
+
+#slide2  .subTitle {
+	font-size: 50px;
+	margin-right:100px;
+}
+
+#buyingLinks{
+	margin-left:35%;
+	margin-right:100px;
+}
+
+.buyBtn {
+	background-color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	overflow: hidden;
+	width: 130px;
+	height: 70px;
+	border-radius: 8px;
+	margin: 3px;
+}
+
+
+#iTunesBtn{
+	background: url(img/icons/iTunes.png) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#iTunesBtn:hover{
+	background: url(img/icons/iTunes.png) center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#amazonBtn{
+	background: url(img/icons/Amazon.png) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#amazonBtn:hover{
+	background: url(img/icons/Amazon.png) center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#deezerBtn{
+	background: url(img/icons/Deezer.png) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#deezerBtn:hover{
+	background: url(img/icons/Deezer.png) center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#googleBtn{
+	background: url(img/icons/Google.png) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#googleBtn:hover{
+	background: url(img/icons/Google.png) center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#qobuzBtn{
+	background: url(img/icons/Qobuz.png) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#qobuzBtn:hover{
+	background: url(img/icons/Qobuz.png) center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#spotifyBtn{
+	background: url(img/icons/Spotify-full.png) center no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#spotifyBtn:hover{
+	background: url(img/icons/Spotify-full.png) center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.buyingLinks{
+	display:block;
+	overflow: hidden;
+	font-size: 70px;
+}
+
+
+/*-----------------------------------------------------
+				Video Box
+-------------------------------------------------------*/
+
+.videoBoxStyle{
+	visibility: hidden;
+	display: block;
+	width: 560px;
+	height: auto;
+	top: 100px;
+	left: 322px;
+	position: fixed;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	background-color:rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 100px #222;
+	color: rgba(100, 100, 100, 1);
+}
+
+.videoBoxStyle h2{
+	color: rgba(50, 50, 50, 1);
+	margin-top : 2px;
+	margin-bottom : 2px;
+}
+
+.videoBoxStyle h3{
+	font-size: 15px;
+	color: rgba(80, 80, 80, 1);
+	margin-top : 2px;
+	margin-bottom : 20px;
+}
+
+.videoBoxStyle img{
+	float: left;
+	margin : 10px;
+}
+
+.videoBoxStyle a{
+	color: rgba(80, 80, 80, 1);
+}
+
+.videoBoxStyle a:hover{
+	color: rgba(0, 0, 0, 1);
+}
+
+.popupNewsContent {
+	padding-top : 10px;
+	text-align: bottom;
+}
+
+
+#videoBoxClose{
+	display: inline;
+	position: absolute;
+	top: -17px;
+	right: -17px;
+	width: 34px;
+	height: 34px;
+	background: url("img/icons/close.png") 0 0 no-repeat;
+	cursor: pointer;
+	z-index: 1103;
+}
+
+/*-----------------------------------------------------
+					Boutons sociaux
+-------------------------------------------------------*/
+
+.imgMiniLink{
+	transition: all 0.3s ease-in-out;
+}
+
+.imgMiniLink:hover{
+	transform:rotate(45deg);
+	padding-bottom: 3px;
+}
+
+#socialAndFb{
+	top: 10px;
+	right: 10px;
+	position: fixed;
+	display: inline-block;
+	width:300px;
+}
+
+.likeButton{
+	width : 100px;
+	display: inline-block;
+}
+
+#social{
+	display: inline-block;
+}
+
+#social .imgMiniLink{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
+
+#wilsound{
+	bottom: 5px;
+	right: 10px;
+	position: fixed;
+	display: inline-block;
+}
+
+#wilsoundImg{
+	display: inline-block;
+}
+#wilsoundImgFile{
+	height:46px;
+}
+
+#wilsoundLinks{
+	display: inline-block;
+	width: 45px;
+}
+
+#wilsound .imgMiniLink{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
+
+
+
+/*-----------------------------------------------------
+					Formats spéciaux
+-------------------------------------------------------*/
+
+
+/*Ipad Retina*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/*Retina iPad in landscape*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/*Retina iPad in portait*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/*iPhone 4/5 in portrait & landscape*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	
+	/*-------------------------- Social--------------------------*/
+	#social .imgMiniLink{
+	width: 60px;
+	height: 60px;
+	}
+	#wilsound .imgMiniLink{
+	width: 60px;
+	height: 60px;
+	}
+	#wilsoundImgFile{
+	height:160px;
+	}
+	#wilsoundLinks{
+	display: inline-block;
+	width: 125px;
+	}
+	#fb-like{
+		visibility:hidden;
+	}
+	
+}
+
+/*iPhone 4/5 in landscape*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+}
+
+/*iPhone 4/5 in portrait*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+
+
+	/*-------------------------- Social--------------------------*/
+	#social {
+		display: block;
+	}
+	#socialAndFb {
+		top: 10px;
+		right: 0px;
+		position: fixed;
+		width: 200px;
+	}
+
+}
+
+
+
